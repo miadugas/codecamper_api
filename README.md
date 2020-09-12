@@ -1,1 +1,1 @@
-## DevScout API
+## CodeCamper API
