@@ -1,7 +1,7 @@
 {
-  "name": "devscout_api",
+  "name": "codecamper_api",
   "version": "1.0.0",
-  "description": "DevScout backend API",
+  "description": "CodeCamper backend API",
   "main": "server.js",
   "scripts": {
     "start": "NODE_ENV=production node server",
