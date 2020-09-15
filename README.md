@@ -1,11 +1,13 @@
 ## CodeCamper API
 
-node & express
+Vanilla JavaScript and a few add on's:
 
-morgan.js - logger
+* node & express
 
-MongoDB Atlas & Compass
+* morgan.js - logger
 
-Mongoose
+* MongoDB Atlas & Compass
 
-Colors ( console )
+* Mongoose
+
+* Colors (for console)
