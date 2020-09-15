@@ -1,4 +1,5 @@
 ## CodeCamper API
+### Backend for a bootcamp directory app
 
 Vanilla JavaScript and a few add on's:
 
