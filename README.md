@@ -1,16 +1,20 @@
 ## CodeCamper API
+
 ### Backend for a bootcamp directory app
 
 Vanilla JavaScript and a few add on's:
 
-* node & express
+- node & express
 
-* morgan.js - logger
+- morgan.js - logger
+  https://www.npmjs.com/package/morgan
 
-* MongoDB Atlas & Compass
+- MongoDB Atlas & Compass
 
-* Mongoose
+- Mongoose
+  https://www.npmjs.com/package/mongoose
 
-* Colors (for console)
+- Colors (for console)
+  https://www.npmjs.com/package/colors
 
-* regex for URL validation
+- regex for URL validation
