@@ -12,3 +12,5 @@ Vanilla JavaScript and a few add on's:
 * Mongoose
 
 * Colors (for console)
+
+* regex for URL validation
