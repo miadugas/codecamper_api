@@ -6,6 +6,6 @@ morgan.js - logger
 
 MongoDB Atlas & Compass
 
-Monngoose
+Mongoose
 
 Colors ( console )
