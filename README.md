@@ -19,6 +19,12 @@ Vanilla JavaScript and a few add on's:
 
 - regex for URL validation
 
--Slugify
-https://www.npmjs.com/package/slugify
+- Slugify
+  https://www.npmjs.com/package/slugify
+
+- node-geocoder
+
+
+- Mapquest Developer
+
 
