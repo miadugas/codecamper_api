@@ -18,3 +18,7 @@ Vanilla JavaScript and a few add on's:
   https://www.npmjs.com/package/colors
 
 - regex for URL validation
+
+-Slugify
+https://www.npmjs.com/package/slugify
+
