@@ -7,7 +7,15 @@ const Bootcamp = require('../models/Bootcamp');
 //@route    GET /api/v1/bootcamps
 //@access   Public
 exports.getBootcamps = asyncHandler(async (req, res, next) => {
-  const bootcamps = await Bootcamp.find();
+  let query;
+
+  let queryStr = JSON.stringify(req.query);
+
+  queryStr = queryStr.replace(/\b(gt|gte|lt|lte|in)\b/g, match => `$${match}`);
+  
+  query = Bootcamp.find(JSON.parse(queryStr));
+  
+  const bootcamps = await query;
 
   res
     .status(200)
@@ -77,32 +85,29 @@ exports.deleteBootcamp = asyncHandler(async (req, res, next) => {
   res.status(200).json({ success: true, data: {} });
 });
 
-//@desc     Get bootamps within a radius
+//@desc     Get bootcamps within a radius
 //@route    GET /api/v1/bootcamps/radius/:zipcode/:distance
 //@access   Private
 exports.getBootcampsInRadius = asyncHandler(async (req, res, next) => {
-    const { zipcode, distance } = req.params;
+  const { zipcode, distance } = req.params;
 
-    //Get lat/long from geocoder 
-    const loc = await geocoder.geocode(zipcode);
-    const lat = loc[0].latitude;
-    const lng = loc[0].longitude;
+  //Get lat/long from geocoder
+  const loc = await geocoder.geocode(zipcode);
+  const lat = loc[0].latitude;
+  const lng = loc[0].longitude;
 
-    //Calc radius using radians (for sphere's)
-    //Divide distance by radius of earth
-    //Radius of Earth = 3,963 mi / 6,378 kil
-    const radius = distance / 3963;
+  // Calc radius using radians (you know because sphere's)
+  // Divide distance by radius of earth
+  // Radius of Earth = 3,963 mi / 6,378 kil
+  const radius = distance / 3963;
 
-    const bootcamps = await Bootcamp.find({
-        location: { $geoWithin: { $centerSphere: [ [ lng, lat ], radius] } }
-    
-    });
-
-    res.status(200).json({
-        success: true,
-        count: bootcamps.length,
-        data: bootcamps
-    });
+  const bootcamps = await Bootcamp.find({
+    location: { $geoWithin: { $centerSphere: [[lng, lat], radius] } },
   });
-  
 
+  res.status(200).json({
+    success: true,
+    count: bootcamps.length,
+    data: bootcamps,
+  });
+});
