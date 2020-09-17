@@ -6,7 +6,9 @@ const errorHandler = require('./middleware/error');
 const connectDB = require('./config/db');
 
 //Load env variables
-dotenv.config({ path: './config/config.env' });
+dotenv.config({
+  path: './config/config.env'
+});
 
 //Connect to DB
 connectDB();
@@ -47,7 +49,7 @@ const server = app.listen(
   PORT,
   console.log(
     `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
-      .bold
+    .bold
   )
 );
 
