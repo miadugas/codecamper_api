@@ -100,11 +100,20 @@ const BootcampSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+}, {
+  toJSON: {
+    virtuals: true
+  },
+  toObject: {
+    virtuals: true
+  }
 });
 
 // Create Camp slug from name
 BootcampSchema.pre('save', function (next) {
-  this.slug = slugify(this.name, { lower: true });
+  this.slug = slugify(this.name, {
+    lower: true
+  });
   next();
 });
 
@@ -125,6 +134,13 @@ BootcampSchema.pre('save', async function (next) {
   // Dont save address in DB can be easily reversed if requested
   this.address = undefined;
   next();
+});
+// Reverse populate with virtuals
+BootcampSchema.virtual('courses', {
+  ref: 'Course',
+  localField: '_id',
+  foreignField: 'bootcamp',
+  justObe: false
 });
 
 module.exports = mongoose.model('Bootcamp', BootcampSchema);
