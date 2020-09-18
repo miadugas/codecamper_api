@@ -5,30 +5,31 @@ const colors = require('colors');
 const errorHandler = require('./middleware/error');
 const connectDB = require('./config/db');
 
-//Load env variables
+// Load env variables
 dotenv.config({
   path: './config/config.env'
 });
 
-//Connect to DB
+// Connect to DB
 connectDB();
 
-//Route files
+// Route files
 const bootcamps = require('./routes/bootcamps');
+const courses = require('./routes/courses');
 
-//initialze app variable in express
+// Initialze app variable in express
 const app = express();
 
-//Body Parser
+// Body Parser
 app.use(express.json());
 
-//Dev logging middleware
+// Dev logging middleware
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 
-//custom logger but I want to use a more robust 3rd party logger in its place
-//moved
+// custom logger but I want to use a more robust 3rd party logger in its place
+// moved
 // const logger = (req, res, next) => {
 //   console.log(
 //     `${req.method} ${req.protocol}://${req.get('host')}${req.originalUrl}`
@@ -38,8 +39,10 @@ if (process.env.NODE_ENV === 'development') {
 
 //app.use(logger);
 
-//Mount routers
+// Mount routers
 app.use('/api/v1/bootcamps', bootcamps);
+app.use('/api/v1/courses', courses);
+
 
 app.use(errorHandler);
 
@@ -53,7 +56,7 @@ const server = app.listen(
   )
 );
 
-//Handle unhandeled promise rejections
+// Handle unhandeled promise rejections
 process.on('unhandledRejection', (err, promise) => {
   console.log(`Unhandled Rejection: Error ${err.message}`.red);
   //Close the server & exit process

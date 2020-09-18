@@ -108,7 +108,7 @@ BootcampSchema.pre('save', function (next) {
   next();
 });
 
-//Geocode & create location field. Called on the address
+// Geocode & create location field. Called on the address
 BootcampSchema.pre('save', async function (next) {
   const loc = await geocoder.geocode(this.address);
   this.location = {
@@ -122,7 +122,7 @@ BootcampSchema.pre('save', async function (next) {
     country: loc[0].countryCode,
   };
 
-  //Dont save address in DB can be easily reversed if requested
+  // Dont save address in DB can be easily reversed if requested
   this.address = undefined;
   next();
 });

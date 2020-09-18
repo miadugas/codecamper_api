@@ -2,7 +2,9 @@ const ErrorResponse = require('../utils/errorResponse');
 const asyncHandler = require('../middleware/async');
 const geocoder = require('../utils/geocoder');
 const Bootcamp = require('../models/Bootcamp');
-const { param } = require('../routes/bootcamps');
+const {
+  param
+} = require('../routes/bootcamps');
 
 // @desc     Get all Bootcamps function
 // @route    GET /api/v1/bootcamps
@@ -30,7 +32,7 @@ exports.getBootcamps = asyncHandler(async (req, res, next) => {
   // Finding resource
   query = Bootcamp.find(JSON.parse(queryStr));
 
-  //SELECT fields
+  // Select fields
   if (req.query.select) {
     const fields = req.query.select.split(',').join(' ');
     query = query.select(fields);
@@ -44,7 +46,7 @@ exports.getBootcamps = asyncHandler(async (req, res, next) => {
     query = query.sort('-createdAt');
   }
 
-  //Pagination 
+  // Pagination 
   const page = parseInt(req.query.page, 10) || 1;
   const limit = parseInt(req.query.limit, 10) || 25;
   const startIndex = (page - 1) * limit;
@@ -137,14 +139,14 @@ exports.updateBootcamp = asyncHandler(async (req, res, next) => {
 });
 
 // @desc     delete bootcamp
-//@route    DELETE /api/v1/bootcamps/:id
-//@access   Private
+// @route    DELETE /api/v1/bootcamps/:id
+// @access   Private
 exports.deleteBootcamp = asyncHandler(async (req, res, next) => {
   const bootcamp = await Bootcamp.findByIdAndDelete(req.params.id);
 
   if (!bootcamp) {
     return next(
-      //correct format not in DB
+      // Correct format not in DB
       new ErrorResponse(`Bootcamp not found with ID of ${req.params.id}`, 404)
     );
   }
@@ -164,7 +166,7 @@ exports.getBootcampsInRadius = asyncHandler(async (req, res, next) => {
     distance
   } = req.params;
 
-  //Get lat/long from geocoder
+  // Get lat/long from geocoder
   const loc = await geocoder.geocode(zipcode);
   const lat = loc[0].latitude;
   const lng = loc[0].longitude;
