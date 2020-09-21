@@ -32,3 +32,6 @@ Vanilla JavaScript and a few add on's:
 
 - Mapquest Developer
   https://developer.mapquest.com/
+
+- JWT Web Token
+https://jwt.io/
