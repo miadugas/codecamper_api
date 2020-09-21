@@ -4,9 +4,9 @@
 
 Vanilla JavaScript and a few add on's:
 
-- node & express
+- Node, npm & express
 
-- morgan.js - logger
+- Morgan.js - logger
   https://www.npmjs.com/package/morgan
 
 - MongoDB Atlas
@@ -21,17 +21,20 @@ Vanilla JavaScript and a few add on's:
 - Colors (for console)
   https://www.npmjs.com/package/colors
 
-- regex for URL validation
+- Regex for URL validation
   https://regexr.com/39nr7
 
 - Slugify
   https://www.npmjs.com/package/slugify
 
-- node-geocoder
+- Node-Geocoder
   https://www.npmjs.com/package/node-geocoder
 
 - Mapquest Developer
   https://developer.mapquest.com/
 
 - JWT Web Token
-https://jwt.io/
+  https://jwt.io/
+
+- Cookie Parser
+  https://www.npmjs.com/package/cookie-parser
