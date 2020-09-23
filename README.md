@@ -38,3 +38,7 @@ Vanilla JavaScript and a few add on's:
 
 - Cookie Parser
   https://www.npmjs.com/package/cookie-parser
+
+- Node Mailer
+https://nodemailer.com/
+
