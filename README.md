@@ -42,3 +42,13 @@ Vanilla JavaScript and a few add on's:
 - Node Mailer
 https://nodemailer.com/
 
+-NoSQL injection
+https://www.npmjs.com/package/express-mongo-sanitize
+
+-Helmet - cross site scripting protection
+https://www.npmjs.com/package/helmet
+
+-XXS Clean
+https://www.npmjs.com/package/xss-clean
+
+
