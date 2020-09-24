@@ -14,18 +14,20 @@ exports.protect = asyncHandler(async (req, res, next) => {
     ) {
         token = req.headers.authorization.split(' ')[1];
     }
+    
     ///////////////////////////////  
     // For cookies if desired later
     ///////////////////////////////
-    // else if(req.cookies.token) {
-    //     token = req.cookies.token
-    // }
+    else if (req.cookies.token) {
+        token = req.cookies.token
+    }
     ///////////////////////////////
     // Make sure token exists 
     if (!token) {
         return next(new ErrorResponse('Not authorized to access this route', 401));
     }
     try {
+
         // Verify token
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
@@ -41,7 +43,7 @@ exports.protect = asyncHandler(async (req, res, next) => {
 //Grant Access to specific roles
 exports.authorize = (...roles) => {
     return (req, res, next) => {
-        if(!roles.includes(req.user.role)) {
+        if (!roles.includes(req.user.role)) {
             return next(new ErrorResponse(`User role ${ req.user.role} is unauthorized to access this route`, 403));
         }
         next();
