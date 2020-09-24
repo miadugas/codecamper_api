@@ -73,16 +73,20 @@ exports.addReview = asyncHandler(async (req, res, next) => {
 // @access    Private
 exports.updateReview = asyncHandler(async (req, res, next) => {
   let review = await Review.findById(req.params.id);
-
+  
   if (!review) {
     return next(
-      new ErrorResponse(`No review with the id of ${req.params.id}`, 404)
+      new ErrorResponse(`No review with the id of ${req.params.id}`, 
+      404
+      )
     );
   }
 
-  // Make sure review belongs to user or user is admin
+  // Make sure review belongs to user or user is admin as admin can edit anything in bootcamp
   if (review.user.toString() !== req.user.id && req.user.role !== 'admin') {
-    return next(new ErrorResponse(`Not authorized to update review`, 401));
+    return next(new ErrorResponse(`Not authorized to update review`, 
+    401
+    ));
   }
 
   review = await Review.findByIdAndUpdate(req.params.id, req.body, {
