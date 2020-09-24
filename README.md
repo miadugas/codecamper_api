@@ -1,6 +1,48 @@
-## CodeCamper API
+# DevCamper API
 
-### Backend for a bootcamp directory app
+> Backend API for DevCamper application, which is a bootcamp directory website
+
+## Usage
+
+Rename "config/config.env.env" to "config/config.env" and update the values/settings to your own
+
+## Install Dependencies
+
+```
+npm install
+```
+
+## Run App
+
+```
+# Run in dev mode
+npm run dev
+
+# Run in prod mode
+npm start
+```
+
+## Database Seeder
+
+To seed the database with users, bootcamps, courses and reviews with data from the "\_data" folder, run
+
+```
+# Destroy all data
+node seeder -d
+
+# Import all data
+node seeder -i
+```
+
+## Demo
+
+The API is live at [devcamper.io](https://devcamper.io)
+
+Extensive documentation with examples [here](https://documenter.getpostman.com/view/9277819/TVKEXx8c)
+
+- Version: 1.0.0
+- License: MIT
+- Author: Mia Dugas
 
 Vanilla JavaScript and a few add on's:
 
@@ -40,7 +82,7 @@ Vanilla JavaScript and a few add on's:
   https://www.npmjs.com/package/cookie-parser
 
 - Node Mailer
-https://nodemailer.com/
+  https://nodemailer.com/
 
 -NoSQL injection
 https://www.npmjs.com/package/express-mongo-sanitize
@@ -51,4 +93,11 @@ https://www.npmjs.com/package/helmet
 -XXS Clean
 https://www.npmjs.com/package/xss-clean
 
+-CORS
+https://www.npmjs.com/package/cors
 
+DocGen
+
+Docs
+URL
+https://documenter.getpostman.com/view/9277819/TVKEXx8c
