@@ -36,17 +36,21 @@ node seeder -i
 
 ## Demo
 
-The API is live at [devcamper.io](https://devcamper.io)
-
 Extensive documentation with examples [here](https://documenter.getpostman.com/view/9277819/TVKEXx8c)
 
 - Version: 1.0.0
 - License: MIT
 - Author: Mia Dugas
 
-Vanilla JavaScript and a few add on's:
+#
 
-- Node, npm & express
+## Vanilla JS with several add on's:
+
+- Node, npm
+  https://nodejs.org/en/download/
+
+- Express
+  https://expressjs.com/en/starter/installing.html
 
 - Morgan.js - logger
   https://www.npmjs.com/package/morgan
@@ -84,20 +88,14 @@ Vanilla JavaScript and a few add on's:
 - Node Mailer
   https://nodemailer.com/
 
--NoSQL injection
-https://www.npmjs.com/package/express-mongo-sanitize
+- NoSQL injection
+  https://www.npmjs.com/package/express-mongo-sanitize
 
--Helmet - cross site scripting protection
-https://www.npmjs.com/package/helmet
+- Helmet - cross site scripting protection
+  https://www.npmjs.com/package/helmet
 
--XXS Clean
-https://www.npmjs.com/package/xss-clean
+- XXS Clean
+  https://www.npmjs.com/package/xss-clean
 
--CORS
-https://www.npmjs.com/package/cors
-
-DocGen
-
-Docs
-URL
-https://documenter.getpostman.com/view/9277819/TVKEXx8c
+- CORS
+  https://www.npmjs.com/package/cors
