@@ -176,7 +176,6 @@ In Digital Ocean, go to networking and add a domain
 Add an A record for @ and for www to your droplet
 
 Register and/or setup domain from registrar
-I prefer Namecheap for domains. Please use this affiliate link if you are going to use them https://namecheap.pxf.io/c/1299552/386170/5618
 
 Choose "Custom nameservers" and add these 3
 
@@ -193,4 +192,3 @@ sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
 
 # Only valid for 90 days, test the renewal process with
 certbot renew --dry-run
-Now visit https://yourdomain.com and you should see your Node app
