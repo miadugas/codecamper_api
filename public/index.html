@@ -10098,7 +10098,7 @@
                         try {
                             var d = s.call(a, b);
                             if (d || c.disconnectedMatch || a.document && 11 !== a.document.nodeType)
-                            return d
+                                return d
                         } catch (e) {}
                     return fa(b, n, null, [a]).length > 0
                 }, fa.contains = function (a, b) {
@@ -10197,7 +10197,8 @@
                                 var e = fa.attr(d, a);
                                 return null == e ? "!=" === b : b ? (e += "", "=" === b ? e === c :
                                     "!=" === b ? e !== c : "^=" === b ? c && 0 === e.indexOf(
-                                    c) : "*=" === b ? c && e.indexOf(c) > -1 : "$=" === b ? c &&
+                                        c) : "*=" === b ? c && e.indexOf(c) > -1 : "$=" === b ?
+                                    c &&
                                     e.slice(-c.length) === c : "~=" === b ? (" " + e.replace(P,
                                         " ") + " ").indexOf(c) > -1 : "|=" === b ? e === c || e
                                     .slice(0, c.length + 1) === c + "-" : !1) : !0
@@ -10242,7 +10243,7 @@
                                         while (m = ++n && m && m[p] || (t = n = 0) || o.pop())
                                             if ((h ? m.nodeName.toLowerCase() === r : 1 === m
                                                     .nodeType) && ++t && (s && (l = m[u] || (m[
-                                                u] = {}), k = l[m.uniqueID] || (l[m
+                                                    u] = {}), k = l[m.uniqueID] || (l[m
                                                     .uniqueID] = {}), k[a] = [w, t]), m === b))
                                                 break;
                                     return t -= e, t === d || t % d === 0 && t / d >= 0
@@ -10295,7 +10296,7 @@
                                         if (c = p ? b.lang : b.getAttribute("xml:lang") || b
                                             .getAttribute("lang")) return c = c.toLowerCase(), c ===
                                             a || 0 === c.indexOf(a + "-"); while ((b = b
-                                        .parentNode) && 1 === b.nodeType);
+                                            .parentNode) && 1 === b.nodeType);
                                     return !1
                                 }
                         }),
@@ -10490,7 +10491,7 @@
                                 return J(b, a) > -1
                             }, h, !0), m = [function (a, c, d) {
                                 var e = !g && (d || c !== j) || ((b = c).nodeType ? k(a, c, d) : l(a, c,
-                                d));
+                                    d));
                                 return b = null, e
                             }]; f > i; i++)
                         if (c = d.relative[a[i].type]) m = [ra(sa(m), c)];
@@ -10829,7 +10830,7 @@
                         },
                         fireWith: function (a, c) {
                             return e || (c = c || [], c = [a, c.slice ? c.slice() : c], g.push(c), b ||
-                            i()), this
+                                i()), this
                         },
                         fire: function () {
                             return j.fireWith(this, arguments), this
@@ -11153,7 +11154,7 @@
                         a = !1;
                         var b, c, e;
                         return c = d.getElementsByTagName("body")[0], c && c.style ? (b = d.createElement(
-                            "div"), e = d.createElement("div"), e.style.cssText =
+                                "div"), e = d.createElement("div"), e.style.cssText =
                             "position:absolute;border:0;width:0;height:0;top:0;left:-9999px", c.appendChild(
                                 e).appendChild(b), "undefined" != typeof b.style.zoom && (b.style.cssText =
                                 "-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;display:block;margin:0;border:0;padding:1px;width:1px;zoom:1",
@@ -11347,21 +11348,21 @@
                                         void 0 : n.event.dispatch.apply(k.elem, arguments)
                                 }, k.elem = a), b = (b || "").match(G) || [""], h = b.length;
                         while (h--) f = oa.exec(b[h]) || [], o = q = f[1], p = (f[2] || "").split(".")
-                        .sort(), o && (j = n.event.special[o] || {}, o = (e ? j.delegateType : j
-                                .bindType) || o, j = n.event.special[o] || {}, l = n.extend({
-                                type: o,
-                                origType: q,
-                                data: d,
-                                handler: c,
-                                guid: c.guid,
-                                selector: e,
-                                needsContext: e && n.expr.match.needsContext.test(e),
-                                namespace: p.join(".")
-                            }, i), (m = g[o]) || (m = g[o] = [], m.delegateCount = 0, j.setup && j.setup
-                                .call(a, d, p, k) !== !1 || (a.addEventListener ? a.addEventListener(o,
-                                    k, !1) : a.attachEvent && a.attachEvent("on" + o, k))), j.add && (j
-                                .add.call(a, l), l.handler.guid || (l.handler.guid = c.guid)), e ? m
-                            .splice(m.delegateCount++, 0, l) : m.push(l), n.event.global[o] = !0);
+                            .sort(), o && (j = n.event.special[o] || {}, o = (e ? j.delegateType : j
+                                    .bindType) || o, j = n.event.special[o] || {}, l = n.extend({
+                                    type: o,
+                                    origType: q,
+                                    data: d,
+                                    handler: c,
+                                    guid: c.guid,
+                                    selector: e,
+                                    needsContext: e && n.expr.match.needsContext.test(e),
+                                    namespace: p.join(".")
+                                }, i), (m = g[o]) || (m = g[o] = [], m.delegateCount = 0, j.setup && j.setup
+                                    .call(a, d, p, k) !== !1 || (a.addEventListener ? a.addEventListener(o,
+                                        k, !1) : a.attachEvent && a.attachEvent("on" + o, k))), j.add && (j
+                                    .add.call(a, l), l.handler.guid || (l.handler.guid = c.guid)), e ? m
+                                .splice(m.delegateCount++, 0, l) : m.push(l), n.event.global[o] = !0);
                         a = null
                     }
                 },
@@ -11392,7 +11393,7 @@
                         r = k.call(b, "namespace") ? b.namespace.split(".") : [];
                     if (i = m = e = e || d, 3 !== e.nodeType && 8 !== e.nodeType && !na.test(q + n.event
                             .triggered) && (q.indexOf(".") > -1 && (r = q.split("."), q = r.shift(), r
-                            .sort()), h = q.indexOf(":") < 0 && "on" + q, b = b[n.expando] ? b : new n
+                                .sort()), h = q.indexOf(":") < 0 && "on" + q, b = b[n.expando] ? b : new n
                             .Event(q, "object" == typeof b && b), b.isTrigger = f ? 2 : 3, b.namespace = r
                             .join("."), b.rnamespace = b.namespace ? new RegExp("(^|\\.)" + r.join(
                                 "\\.(?:.*\\.|)") + "(\\.|$)") : null, b.result = void 0, b.target || (b
@@ -11777,7 +11778,7 @@
                     var d, e, f, g, h, i = n.contains(a.ownerDocument, a);
                     if (l.html5Clone || n.isXMLDoc(a) || !ua.test("<" + a.nodeName + ">") ? f = a
                         .cloneNode(!0) : (Ba.innerHTML = a.outerHTML, Ba.removeChild(f = Ba
-                        .firstChild)), !(l.noCloneEvent && l.noCloneChecked || 1 !== a.nodeType &&
+                            .firstChild)), !(l.noCloneEvent && l.noCloneChecked || 1 !== a.nodeType &&
                             11 !== a.nodeType || n.isXMLDoc(a)))
                         for (d = ea(f), h = ea(a), g = 0; null != (e = h[g]); ++g) d[g] && Ga(e, d[g]);
                     if (b)
@@ -12191,9 +12192,9 @@
                 },
                 toggle: function (a) {
                     return "boolean" == typeof a ? a ? this.show() : this.hide() : this.each(
-                function () {
-                        W(this) ? n(this).show() : n(this).hide()
-                    })
+                        function () {
+                            W(this) ? n(this).show() : n(this).hide()
+                        })
                 }
             });
 
@@ -13037,7 +13038,7 @@
                                 "; q=0.01" : "") : l.accepts["*"]);
                     for (e in l.headers) w.setRequestHeader(e, l.headers[e]);
                     if (l.beforeSend && (l.beforeSend.call(m, w, l) === !1 || 2 === u)) return w
-                .abort();
+                        .abort();
                     v = "abort";
                     for (e in {
                             success: 1,
@@ -13112,7 +13113,7 @@
                         this[0].parentNode && b.insertBefore(this[0]), b.map(function () {
                             var a = this;
                             while (a.firstChild && 1 === a.firstChild.nodeType) a = a
-                            .firstChild;
+                                .firstChild;
                             return a
                         }).append(this)
                     }
@@ -13222,7 +13223,7 @@
             a.attachEvent && a.attachEvent("onunload", function () {
                 for (var a in fc) fc[a](void 0, !0)
             }), l.cors = !!gc && "withCredentials" in gc, gc = l.ajax = !!gc, gc && n.ajaxTransport(function (
-            b) {
+                b) {
                 if (!b.crossDomain || l.cors) {
                     var c;
                     return {
@@ -13432,8 +13433,9 @@
                     return Y(this, function (a, d, e) {
                         var f = mc(a);
                         return void 0 === e ? f ? b in f ? f[b] : f.document.documentElement[
-                            d] : a[d] : void(f ? f.scrollTo(c ? n(f).scrollLeft() : e, c ? e :
-                                n(f).scrollTop()) : a[d] = e)
+                            d] : a[d] : void(f ? f.scrollTo(c ? n(f).scrollLeft() : e, c ?
+                            e :
+                            n(f).scrollTop()) : a[d] = e)
                     }, a, d, arguments.length, null)
                 }
             }), n.each(["top", "left"], function (a, b) {
@@ -13557,7 +13559,7 @@
                 b && b.preventDefault(), g.length || (g = e.closest(".alert")), g.trigger(b = a.Event(
                     "close.bs.alert")), b.isDefaultPrevented() || (g.removeClass("in"), a.support.transition &&
                     g.hasClass("fade") ? g.one("bsTransitionEnd", c).emulateTransitionEnd(d
-                    .TRANSITION_DURATION) : c())
+                        .TRANSITION_DURATION) : c())
             };
             var e = a.fn.alert;
             a.fn.alert = b, a.fn.alert.Constructor = d, a.fn.alert.noConflict = function () {
@@ -13624,7 +13626,7 @@
                         f = a.extend({}, c.DEFAULTS, d.data(), "object" == typeof b && b),
                         g = "string" == typeof b ? b : f.slide;
                     e || d.data("bs.carousel", e = new c(this, f)), "number" == typeof b ? e.to(b) : g ? e[g]
-                    () : f.interval && e.pause().cycle()
+                        () : f.interval && e.pause().cycle()
                 })
             }
             var c = function (b, c) {
@@ -14028,7 +14030,7 @@
                     a = b.right - Math.abs(b.left)
                 }
                 this.bodyIsOverflowing = document.body.clientWidth < a, this.scrollbarWidth = this
-                .measureScrollbar()
+                    .measureScrollbar()
             }, c.prototype.setScrollbar = function () {
                 var a = parseInt(this.$body.css("padding-right") || 0, 10);
                 this.originalBodyPad = document.body.style.paddingRight || "", this.bodyIsOverflowing && this.$body
@@ -14359,7 +14361,7 @@
                     a.find(".popover-title")[this.options.html ? "html" : "text"](b), a.find(".popover-content")
                         .children().detach().end()[this.options.html ? "string" == typeof c ? "html" : "append" :
                             "text"](c), a.removeClass("fade top bottom left right in"), a.find(".popover-title")
-                    .html() || a.find(".popover-title").hide()
+                        .html() || a.find(".popover-title").hide()
                 }, c.prototype.hasContent = function () {
                     return this.getTitle() || this.getContent()
                 }, c.prototype.getContent = function () {
@@ -14676,11 +14678,9 @@
     </script><br><br>
     <footer class="navbar-default navbar-fixed-bottom">
         <div class=container-fluid>
-            <div class="span12 text-center"><span data-toggle=tooltip
-                    title="If the application help you, please feel free to give a star to the project in github. Your star inspire me to work more on open-source projects like this!">Made
-                    with <em class=love-color>&#9829;</em> by <a href=https://github.com/thedevsaddam target=_blank
-                        class=text-muted>thedevsaddam</a> | Generated at: 2020-09-23 22:39:14 by <a
-                        href=https://github.com/thedevsaddam/docgen target=_blank class=text-muted>docgen</a></span>
+            <div class="span12 text-center"><span data-toggle=tooltip title="Made with <3 :)">Made
+                    with <em class=love-color>&#9829;</em> by <a href=https://miacodes.com target=_blank
+                        class=text-muted>Mia Dugas</a> | Generated at: 2020-09-23 22:39:14 </span>
             </div>
         </div>
     </footer>
