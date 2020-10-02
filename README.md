@@ -1,6 +1,9 @@
 # CodeCamper API
 
+
 ![Image of CodeCamperAPI]()
+
+=======
 
 > Backend API for CodeCamper application, which is a bootcamp directory website
 
