@@ -1,7 +1,7 @@
 # CodeCamper API
 
 
-![Image of CodeCamperAPI]()
+![Image of CodeCamperAPI](https://github.com/miadugas/codecamper_api/blob/master/codecamperapi.jpg)
 
 =======
 
