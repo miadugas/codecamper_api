@@ -1,4 +1,4 @@
-# CodeCamper API
+# CodeCamper API - Updated 04/14/2022
 
 
 ![Image of CodeCamperAPI](https://github.com/miadugas/codecamper_api/blob/master/codecamperapi.jpg)
